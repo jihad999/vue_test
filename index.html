@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>THe First</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div id="div1">
+            {{ message }}
+            <h1>Hello {{ myName() }}</h1>
+            <p v-if="age > 40">Your age is old</p>
+            <p v-else-if="age < 40 && age > 15">Your age is not old</p>
+            <p v-else="age < 15">Your age is young</p>
+            <ul>
+                <li v-for='(skill, index) in skills'>{{ index }} -> {{ skill }}</li>
+            </ul>
+            <p>{{ today }}</p>
+            <button @click='newDate' >New Date</button>
+            <p v-text="vext"></p>
+            <div v-html="vtml"></div>
+            <a v-bind:href="bakkaheUrl" target="_blank">
+                <img v-bind:src="bakkahImg" v-bind:alt="bakkah" />
+            </a> <br>
+            <p>
+                <button @click='counter1' >increase: </button>
+                <button @click='counter2' >decrease: </button>
+                {{ num }}
+            </p>
+            <form action="" method="GET">
+                <!-- <input type="text" placeholder="vBind" name="vBind" :value="userName"> -->
+                <input type="text" placeholder="vModel" name="vModel" v-model:value="userName" >
+                <span>{{ userName }}</span>
+            </form>
+        
+        </div>
+
+        <script src="js/vue.js" ></script>
+        <script src="js/script.js" ></script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>component</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div id="app">    
+            <first-component v-for="user in users" :first="user.first" :age="age"></first-component>  
+            <seconed-component :age="age" :age="age"></seconed-component>
+            <local1></local1>
+            <local2></local2>
+                
+                <form action="" method="GET">
+                    <input type="text" placeholder="Search" v-model="findLanguage" >
+                    <ul>
+                        <li v-for="lang in filterLanguage">{{lang}}</li>
+                    </ul>
+                </form>
+
+                <form action="" method="GET">
+                    <input type="text" placeholder="Validate" v-model="username" >
+                    <p>{{ validation }}</p>
+                </form>
+
+            <convert></convert><br>
+            <conv-time></conv-time>
+            
+        </div>
+        
+
+        <script src="js/vue.js" ></script>
+        <script src="js/component.js" ></script>
+    </body>
+</html>
